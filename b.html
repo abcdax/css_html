@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Ajout de FontAwesome pour les icônes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espacement entre les icônes */
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #333;
+            color: #fff;
+            font-size: 28px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .icon:hover {
+            transform: translateY(-5px); /* Effet de survol */
+        }
+
+        .icon.instagram:hover {
+            background-color: #E4405F;
+        }
+
+        .icon.facebook:hover {
+            background-color: #1877F2;
+        }
+
+        .icon.twitter:hover {
+            background-color: #1DA1F2;
+        }
+
+        .icon.linkedin:hover {
+            background-color: #0077b5;
+        }
+
+        .icon.github:hover {
+            background-color: #333;
+        }
+
+        .icon i {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact">
+        <div class="wrapper">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com" class="icon instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com" class="icon facebook" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <!-- Twitter -->
+            <a href="https://www.twitter.com" class="icon twitter" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com" class="icon linkedin" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://www.github.com" class="icon github" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

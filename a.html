@@ -2,16 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="s.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="s.css">
+    
+    <title>Username Input</title>
+    
 </head>
 <body>
-    <div class="wrapper">
-        <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+    <!--debut formulaire -->
+    <div class="formulaire">
+    <div class="form-container">
+        <div class="textbox">
+            <input 
+                id="input"
+                type="text"
+                autocomplete="off"
+                oninput="handleInput(event)"
+                onblur="handleBlur(event)"
+            />
+            <label for="input">Username</label>
+            <span class="icon"><i class="fa fa-user"></i></span>
+        </div>
+        <button disabled>Sign Up</button>
     </div>
+
+    <!--fin formulaire -->
+    
+</div>
+<script src="script.js"></script>
 </body>
 </html>

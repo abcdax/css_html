@@ -1,30 +1,104 @@
-.wrapper{
+.formulaire {
+    margin: 0;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-}
-.icon{
-    width: 5,625rem;
-    height: 5,625rem;
-    background-color: #fff;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
+    background: #151515;
+    font-family: "Poppins", sans-serif;
+    color: white;
 }
-.icon:hover >i {
-    scale: 1.2;
-    color: #f1f1f1;
+
+.form-container {
+display: flex;
+flex-direction: column; /* Empile les éléments */
+align-items: center;    /* Centre horizontalement */
 }
-.icon:before {
-    background: var(--color);
-    content: "";
-    position: absolute;
-    width: 130%;
-    height: 130%;
-    left: -110%;
-    top: 80%;
-    transform: rotate(45deg);
+
+.textbox {
+position: relative;
+width: 300px;
+margin-bottom: 20px; /* Espace entre le champ et le bouton */
 }
+
+.textbox input {
+width: 100%;
+height: 56px;
+padding-left: 48px;
+border: 2px solid #292929;
+border-radius: 8px;
+outline: none;
+background: transparent;
+color: #f9f9f9;
+font-size: 16px;
+transition: 0.3s ease;
+}
+
+.textbox input.valid {
+border-color: #14ca99;
+}
+
+.textbox input.invalid {
+border-color: red;
+}
+
+.textbox .icon {
+position: absolute;
+left: 16px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 20px;
+color: #888888;
+transition: 0.3s ease;
+}
+
+.textbox label {
+position: absolute;
+top: 50%;
+left: 48px;
+transform: translateY(-50%);
+font-size: 16px;
+color: #888888;
+pointer-events: none;
+transition: 0.3s ease;
+background: #151515;
+padding: 0 4px;
+}
+
+.textbox input:focus + label,
+.textbox input.has-value + label {
+top: -8px;
+left: 48px;
+font-size: 12px;
+color: #14ca99;
+}
+
+.textbox input:focus ~ .icon,
+.textbox input.has-value ~ .icon {
+top: -8px;
+font-size: 12px;
+color: #14ca99;
+}
+
+button {
+height: 48px;
+width: 120px;
+background: #292929;
+color: white;
+border: none;
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+opacity: 0.5;
+transition: 0.3s ease;
+}
+
+button:enabled {
+opacity: 1;
+background: #14ca99;
+}
+
+
+
